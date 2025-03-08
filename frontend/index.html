@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="join-session">
+        <h2>Join Game Session</h2>
+        <input type="text" id="join-session-id" placeholder="Enter Session ID" required>
+        <input type="text" id="player-name" placeholder="Enter Your Name" required> <!-- Added player name input -->
+        <button id="join-session-button">Join Session</button>
+    </div>
+    
+    <div id="create-session">
+        <h2>Create Game Session</h2>
+        <input type="text" id="session-id" placeholder="Enter Session ID">
+        <input type="text" id="question" placeholder="Enter Question">
+        <input type="text" id="answer" placeholder="Enter Answer">
+        <button id="create-session-button">Create Session</button>
+    </div>
+
+    <div id="chat-interface" style="display: none;"> <!-- Hide chat interface initially -->
+        <h1>Guessing Game</h1>
+        <div id="players"></div> <!-- Changed class to id for consistency -->
+        <div id="question"></div>
+        <input type="text" id="guess-input" placeholder="Enter your guess"> <!-- Fixed typo -->
+        <button id="submit-guess">Guess</button>
+        <div id="messages"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
